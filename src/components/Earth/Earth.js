@@ -21,7 +21,7 @@ const Earth = () => {
   return (
     <mesh ref={earthRef}>
       <meshBasicMaterial map={texture} />
-      <sphereGeometry />
+      <sphereGeometry args={[1, 128, 128]} />
       <OrbitControls
         minDistance={3}
         maxDistance={8}
