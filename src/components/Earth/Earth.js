@@ -3,6 +3,8 @@ import { useRef } from "react";
 
 import earthTexture from "../../assets/earth-texture.jpg";
 
+import bumpMap from "../../assets/bump-map.jpg";
+
 import { TextureLoader } from "three";
 
 import { OrbitControls } from "@react-three/drei";
@@ -12,6 +14,8 @@ const Earth = () => {
 
   const texture = new TextureLoader().load(earthTexture);
 
+  const bumpMapTexture = new TextureLoader().load(bumpMap);
+
   useFrame(() => {
     if (earthRef.current) {
       earthRef.current.rotation.y += 0.002;
@@ -20,11 +24,16 @@ const Earth = () => {
 
   return (
     <mesh ref={earthRef}>
+      {/* <meshStandardMaterial
+        map={texture}
+        bumpMap={bumpMapTexture}
+        bumpScale={0.05}
+      /> */}
       <meshBasicMaterial map={texture} />
       <sphereGeometry args={[1, 128, 128]} />
       <OrbitControls
-        minDistance={3}
-        maxDistance={8}
+        minDistance={2}
+        maxDistance={6}
         enableZoom={true}
         dampingFactor={0.1}
       />
