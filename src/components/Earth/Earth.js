@@ -1,10 +1,16 @@
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
+import earthTexture from "../../assets/earth-texture.jpg";
+
+import { TextureLoader } from "three";
+
 import { OrbitControls } from "@react-three/drei";
 
 const Earth = () => {
   const earthRef = useRef();
+
+  const texture = new TextureLoader().load(earthTexture);
 
   useFrame(() => {
     if (earthRef.current) {
@@ -14,7 +20,7 @@ const Earth = () => {
 
   return (
     <mesh ref={earthRef}>
-      <meshBasicMaterial wireframe={true} />
+      <meshBasicMaterial map={texture} />
       <sphereGeometry />
       <OrbitControls
         minDistance={3}
