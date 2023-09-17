@@ -2,6 +2,10 @@
 
 A spinning Earth using React Three Fiber.
 
+## Live
+
+Check out the project: https://nich0las2004.github.io/Spinning-Earth/
+
 ## Getting Started
 
 To get started, follow these simple steps:
