@@ -1,4 +1,4 @@
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useLoader } from "@react-three/fiber";
 import { useRef } from "react";
 
 import earthTexture from "../../assets/earth-texture.jpg";
@@ -10,7 +10,7 @@ import { OrbitControls } from "@react-three/drei";
 const Earth = () => {
   const earthRef = useRef();
 
-  const texture = new TextureLoader().load(earthTexture);
+  const texture = useLoader(TextureLoader, earthTexture);
 
   // constant rotation
 

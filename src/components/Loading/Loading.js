@@ -1,5 +1,13 @@
-const Loading = () => {
-    return <p>Loading...</p>
-}
+import classes from "./Loading.module.css";
 
-export default Loading
+const Loading = () => {
+  return (
+    <div className={classes.container}>
+      <div className={classes.ring}>
+        <span></span>
+      </div>
+    </div>
+  );
+};
+
+export default Loading;
