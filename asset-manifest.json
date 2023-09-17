@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Spinning-Earth/static/css/main.e2ae011c.css",
+    "main.js": "/Spinning-Earth/static/js/main.3de65f15.js",
+    "static/media/earth-texture.jpg": "/Spinning-Earth/static/media/earth-texture.801d1713d7ff8817bc33.jpg",
+    "index.html": "/Spinning-Earth/index.html",
+    "main.e2ae011c.css.map": "/Spinning-Earth/static/css/main.e2ae011c.css.map",
+    "main.3de65f15.js.map": "/Spinning-Earth/static/js/main.3de65f15.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2ae011c.css",
+    "static/js/main.3de65f15.js"
+  ]
+}
